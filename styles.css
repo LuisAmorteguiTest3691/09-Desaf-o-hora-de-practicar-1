@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu+Condensed&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-family: "Ubuntu Condensed", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+h1 {
+  margin: 0;
+  padding: 15px 0;
+}
+
+header .contenedor {
+  box-shadow: 0px 8px 15px -8px rgba(181,0,181,1);
+  border-radius: 8px;
+  width: 100%;
+  background: rgb(249, 248, 248);
+}
+header .contenedor{
+  width: 100%;
+}
+li,ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* utilidades */
+.borde-rojo {
+  color: 1px solid red;
+}
+.boton {
+    background-color: rgb(103, 103, 234);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.1s, background-color 0.1s;
+  }
+  .boton:hover {
+    background-color: blue;
+  }
+  .boton:active {
+    transform: scale(0.95); /* Se encoge ligeramente */
+    background-color: rgb(103, 103, 234); /* Cambia el color de fondo */
+  }
+
+.contenedor-fuido {
+  margin: auto 150px;
+  width: 1200px;
+}
+
+/* principal */
+.cajas {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.caja {
+    border: 1px solid rgb(234, 227, 227);
+    margin: 5px;
+    padding: 2px 10px;
+    display: flex;
+    border-radius: 8px;
+}
+.caja .respuesta{
+    display: flex;
+    flex-direction: row;
+}
+.sub-caja {
+    width: 50%;
+    /* border: 1px solid #12f1f5; */
+    padding: 20px;
+    margin: 15px 5px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+.descripcion-ejercicio {
+    padding: 20px;
+    margin: 15px 5px;
+    border-radius: 8px;
+    background-color: white;
+    /* cursor: pointer; */
+    position: relative;
+    transition: background-color 0.3s ease;
+  }
+  
+  .descripcion-ejercicio:hover {
+    background: #ecfeff;
+    animation: borderAnimation 0.5s linear forwards;
+  }
+  
+  /* Animación para dibujar el borde */
+  @keyframes borderAnimation {
+    0% {
+      outline: 2px solid transparent;
+    }
+    25% {
+      outline: 2px solid rgb(43, 151, 165);
+      outline-offset: -10px;
+    }
+    50% {
+      outline: 2px solid rgb(43, 151, 165);
+      outline-offset: -5px;
+    }
+    100% {
+      outline: 2px solid rgb(43, 151, 165);
+      outline-offset: 0px;
+    }
+  }
+
+.info-label {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    padding: 2px 4px;
+    /* border: 1px solid black; */
+    /* padding: 8px; */
+}
+
+
+.caja-global-info {
+    /* border: 1px solid black; */
+    width: 50%;
+    padding: 8px;
+}
+.sub-caja .caja-global-info label {
+    /* border: 1px solid black; */
+    margin: 0px 2px;
+    color: rgb(155, 155, 155);
+}
+.sub-caja .caja-global-info span {
+    /* border: 1px solid black; */
+    padding: 2px 0px;
+}
+.caja-global-info .entrada input {
+    /* padding: 7px; */
+    margin-left: 2px;
+    padding: 8px;
+    border: 1px solid rgb(203, 193, 193);
+    border-radius: 8px;
+}
+.caja-global-info .entrada input:focus {
+    background-color: #ECFEFF;
+}
